@@ -1,3 +1,46 @@
+//.eslintrc.json
 {
-  "extends": "next/core-web-vitals"
+    "extends": [
+        "next/core-web-vitals",
+        "react-app",
+        "react-app/jest",
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["react", "import", "react-hooks", "@emotion"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "no-console": "off",
+        "no-underscore-dangle": "off",
+        "no-undef": "off",
+        "no-unused-vars": ["warn", { "args": "none" }],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "@emotion/jsx-import": "error",
+        "@emotion/pkg-renaming": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "overrides": []
 }

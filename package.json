@@ -1,20 +1,33 @@
 {
-  "name": "ash-web-next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.2.0"
-  }
+    "name": "ash-web-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "pm2": "npx pm2 start \"npm run dev\" --name ASH-WEB-NEXT",
+        "monit": "npx pm2 start \"npm run dev\" --name ASH-WEB-NEXT && npx pm2 monit",
+        "dev": "next dev -p 3301",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.9.3",
+        "@emotion/eslint-plugin": "^11.7.0",
+        "@emotion/react": "^11.9.3",
+        "@emotion/server": "^11.4.0",
+        "@emotion/styled": "^11.9.3",
+        "next": "12.2.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.18.0",
+        "eslint-config-next": "12.2.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-next": "0.0.0",
+        "eslint-plugin-prettier": "^4.2.0",
+        "eslint-plugin-react": "^7.30.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.7.1"
+    }
 }
